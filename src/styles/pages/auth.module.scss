@@ -1,0 +1,25 @@
+@import "../variables.scss";
+
+.container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid $border-color;
+  border-radius: 6px;
+  text-align: center;
+  background-color: $background-color-2;
+  @media (max-width: 768.98px) {
+    max-width: 100%;
+    margin: 20px 16px 0;
+  }
+
+  h1 {
+    margin-bottom: 20px;
+  }
+
+  .error {
+    transition: 0.3s ease-in-out;
+    color: $error-color;
+    margin: 10px 0;
+  }
+}

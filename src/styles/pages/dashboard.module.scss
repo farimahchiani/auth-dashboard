@@ -1,0 +1,15 @@
+@import "../variables.scss";
+
+.container {
+  max-width: 600px;
+  margin: 80px auto;
+  padding: 30px;
+  border-radius: 8px;
+  background-color: $background-color;
+  text-align: center;
+
+  h1 {
+    font-weight: bold;
+    color: $text-color;
+  }
+}
