@@ -9,7 +9,7 @@ import { useRouter } from "next/navigation";
 type User = {
   name: { first: string; last: string };
   email: string;
-  
+  phone?: string; 
 };
 
 export default function AuthPage() {
@@ -41,7 +41,9 @@ export default function AuthPage() {
       }
 
       const user: User = data.results[0];
-      localStorage.setItem("user", JSON.stringify(user));
+      const userWithPhone = { ...user, phone };
+
+      localStorage.setItem("user", JSON.stringify(userWithPhone));
 
       router.push("/dashboard");
     } catch (e) {
